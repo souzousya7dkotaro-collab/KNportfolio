@@ -8,15 +8,17 @@ img {
 }
 
 .sub img{
+    height: auto;
     width: 300px;
 }
 /* :hover .skill-content img{
     border:1px solid black;
 } */
- dialog img{
+dialog img{
     width: 33%;
     max-height: 33%;
 }
+/* nav */
 .flex-row{
     display: flex;
     flex-direction: row;
@@ -24,8 +26,83 @@ img {
     padding: 0;
     gap: 10px;
     flex-wrap:wrap;
+    justify-content: flex-end;
 }
-button.img{
-    height: auto;
-    width: 10%;
+#my{
+    text-align: center;
+    margin-top: 8px;
+}
+/* megane */
+.my-content{
+    display: flex;
+    flex-direction: row;
+    padding: 4%;
+    gap: 8px;
+}
+.my-img-name {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width:33%;
+    gap: 8px;
+}
+.my-text{
+    width:66%;
+    margin: auto;
+}
+.my-content img{
+    border-radius: 50%;
+}
+
+/* skill */
+.contents-title{
+    text-align: center;
+}
+.skill-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.skill-content img{
+    width: 33%;
+    max-height: 33%;
+    margin-bottom: 8px;
+}
+
+#accordion{
+    max-width: 80%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    
+}
+
+/* h2color */
+.skill-header{
+    background-color: red;
+}
+.dev-header{
+    background-color: orange;
+}
+.license-header{
+    background-color: yellow;
+}
+.study-header{
+    background-color: green;
+}
+.interest-header{
+    background-color: aqua;
+}
+.application-header{
+    background-color: blue;
+}
+.hobby-header{
+    background-color: purple;
+}
+.qa-header{
+    background-color: grey;
+}
+.etc-header{
+    background-color: black;
+    color: white;
 }

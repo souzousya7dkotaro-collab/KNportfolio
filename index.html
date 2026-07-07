@@ -10,11 +10,11 @@
     <title>KNのポートフォリオ</title>
 </head>
 <body>
-    <div id="app1">
+<div id="app1">
     <main>
     <h1 ><a href="index.html">KNのポートフォリオ</a></h1>
     <nav>
-        <ul>
+        <ul class="flex-row">
             <li><a href="#my">自己紹介</a></li>
             <li><a href="#skill">スキル</a></li>
             <li><a href="#dev">開発環境</a></li>
@@ -28,10 +28,10 @@
         </ul>
     </nav>
     <img src="images/SPmainvisual.jpg" alt="SP_mainvisual">
-</main>
+    </main>
 
-<div class ="sub">
-    <section id="my">自己紹介</section>
+    <div class ="sub">
+    <section id="my"><h2>自己紹介</h2></section>
         <div class="my-content">
             <div class="my-img-name">
             <img src="images/KNmegane.jpg" alt="megane">
@@ -40,7 +40,7 @@
             <div class="my-text">
             <p>リカレント福岡校にて
             フロントエンジニア養成科にて
-            HTML5、CSS3、javascriptを学ぶ
+            HTML5、CSS3、javascriptを学ぶ<br>
             前職はケータイキャリアショップに勤務
             スマホ販売、ネット回線
             クレジットカード、でんき
@@ -49,35 +49,9 @@
             </div>
         </div>
 
-    <section id="skill">
-        <h2 class="contents-title">スキル</h2>
-        <div class="skill-content"></div>
-    </section>
-    <section id="dev">
-        <h2 class="contents-title">開発環境</h2>
-        <div class="dev-content"></div>
-    </section>
-    <section id="license">
-        <h2 class="contents-title">所有資格</h2>
-    </section>
-    <section id="study">
-        <h2 class="contents-title">学習中の資格</h2>
-    </section>
-    <section id="interest">
-        <h2 class="contents-title">興味のある分野</h2>
-    </section>
-    <section id="app">
-        <h2 class="contents-title">作品・アプリ</h2>
-    </section>
-    <section id="hobby">
-        <h2 class="contents-title">趣味・特技</h2>
-    </section>
-    <section id="qa">
-        <h2 class="contents-title">お問い合わせ</h2>
-    </section>
-    <section id="etc">
-        <h2 class="contents-title">etc...</h2>
-    </section>
+        <div v-for="list in skillList" :key="list.id">
+        <skill-list :skill="list" :list-content="listContent"></skill-list>
+        </div>
     </div>
 </div>
 <footer></footer>
@@ -96,6 +70,10 @@
     </div>
 </dialog>
 
-<script src="./js/skill_contents.js"></script>
+<script src="./js/data.js"></script>
+<script src="./js/component.js"></script>
+<script src="./js/vue.js"></script>
+
+
 </body>
 </html>
