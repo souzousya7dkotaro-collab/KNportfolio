@@ -33,25 +33,30 @@ dialog img{
     margin-top: 8px;
 }
 /* megane */
+
 .my-content{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     padding: 4%;
     gap: 8px;
 }
 .my-img-name {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    width:33%;
     gap: 8px;
+    justify-content: center;
 }
 .my-text{
-    width:66%;
     margin: auto;
+    padding: 4%;
 }
 .my-content img{
     border-radius: 50%;
+    width:33%;
+}
+.my-content p{
+    font-weight: bold;
 }
 
 /* skill */
@@ -69,7 +74,7 @@ dialog img{
     margin-bottom: 8px;
 }
 
-#accordion{
+#skill-category{
     max-width: 80%;
     display: flex;
     flex-direction: column;
@@ -87,22 +92,9 @@ dialog img{
 .license-header{
     background-color: yellow;
 }
-.study-header{
+.application-header{
     background-color: green;
 }
-.interest-header{
-    background-color: aqua;
-}
-.application-header{
-    background-color: blue;
-}
-.hobby-header{
-    background-color: purple;
-}
 .qa-header{
-    background-color: grey;
-}
-.etc-header{
-    background-color: black;
-    color: white;
+    background-color: aqua;
 }

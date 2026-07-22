@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+.top,.arrive,.sell{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    background-color: lightblue;
+    border-radius: 5%;
+}
+
+.top-ul{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    gap: 8px;
+}
+
+/* 入荷画面 */
+.arrive-product{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+

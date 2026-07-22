@@ -8,6 +8,9 @@ new Vue({
     methods:{
         toggle(){
             this.isOpen=!this.isOpen;
+        },
+        openContentModal(content){
+            this.$refs.openContentModal.openContentModal(content);
         }
     }
 });

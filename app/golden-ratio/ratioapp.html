@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.11/dist/vue.js"></script>
+    <title>比例式グラム計算アプリ</title>
+</head>
+<body >
+    <main class="text-center rounded-3" id="app">
+        <h1 class="header ">比例式グラム計算アプリ</h1>
+        <div class="app">
+            <base-select :object-list="objectList"></base-select>
+            <user-input></user-input>
+        </div>
+    </main>
+
+<script src="./data/ratioappdata.js"></script>
+<script src="./js/function.js"></script>
+<script src="./js/component.js"></script>
+<script src="./js/vue.js"></script>
+</body>
+</html>

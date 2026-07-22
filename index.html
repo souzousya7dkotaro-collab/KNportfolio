@@ -14,17 +14,14 @@
     <main>
     <h1 ><a href="index.html">KNのポートフォリオ</a></h1>
     <nav>
-        <ul class="flex-row">
+        <ul class="flex-row" id="nav">
             <li><a href="#my">自己紹介</a></li>
+
             <li><a href="#skill">スキル</a></li>
             <li><a href="#dev">開発環境</a></li>
             <li><a href="#license">所有資格</a></li>
-            <li><a href="#study">学習中の資格</a></li>
-            <li><a href="#interest">興味のある分野</a></li>
-            <li><a href="#app">作品・アプリ</a></li>
-            <li><a href="#hobby">趣味・特技</a></li>
+            <li><a href="#application">アプリケーション</a></li>
             <li><a href="#qa">お問い合わせ</a></li>
-            <li><a href="#etc">etc...</a></li>
         </ul>
     </nav>
     <img src="images/SPmainvisual.jpg" alt="SP_mainvisual">
@@ -34,43 +31,37 @@
     <section id="my"><h2>自己紹介</h2></section>
         <div class="my-content">
             <div class="my-img-name">
-            <img src="images/KNmegane.jpg" alt="megane">
-            <p>野田耕太郎</p>
+            <img class="megane" src="images/KNmegane.jpg" alt="megane">
+            <p class="name">野田耕太郎</p>
             </div>
             <div class="my-text">
-            <p>リカレント福岡校にて
+            <p>リカレント福岡校<br>
             フロントエンジニア養成科にて
             HTML5、CSS3、javascriptを学ぶ<br>
-            前職はケータイキャリアショップに勤務
-            スマホ販売、ネット回線
-            クレジットカード、でんき
-            スマートフォン故障受付
+            前職はスマホキャリアショップに勤務<br>
+            <ul>
+                <li>スマートフォン</li>
+                <li>インターネット回線</li>
+                <li>クレジットカード</li>
+                <li>でんき</li>
+                <li>スマートフォン故障受付</li>
+                <li>スマホ教室</li>
+            </ul>
             </p>
+            <p>趣味特技：占い、旅行、運動、テイスティング、家電</p>
             </div>
         </div>
 
         <div v-for="list in skillList" :key="list.id">
-        <skill-list :skill="list" :list-content="listContent"></skill-list>
+        <skill-list :skill="list" :list-content="listContent"
+        @content-modal="openContentModal"></skill-list>
         </div>
+        <content-modal ref="openContentModal"></content-modal>
     </div>
 </div>
 <footer></footer>
 
-<dialog id="skill-modal" class="rounded-3 shadow border-0 p-0">
-    <div class="skill-modal-content">
-        <div class="skill-modal-header border-bottom-0 pb-0">
-            <button class="btn-close ms-auto" type="button" id="skill-modal-close" aria-label="Close"></button>
-        </div>
-        <div class="skill-modal-body text-center p-4">
-            <img src="" alt="skill-img" id="skill-modal-img" class="mb-3 border border-3 border-primary">
-            <h2 id="skill-modal-name">名前</h2>
-            <span id="skill-modal-add">add</span>
-            <p id="skill-modal-desc">説明</p>
-        </div>
-    </div>
-</dialog>
-
-<script src="./js/data.js"></script>
+<script src="./data/data.js"></script>
 <script src="./js/component.js"></script>
 <script src="./js/vue.js"></script>
 

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.11/dist/vue.js"></script>
+    <title>簡易POSシステム</title>
+</head>
+<body>
+    <div class="inventory" id="inventory">
+    <h1>棚卸・履歴確認画面</h1>
+
+    <section>
+        <h2>棚卸画面</h2>
+        <table>
+            <tr>
+                <td>商品名</td>
+                <td>価格</td>
+                <td>在庫数</td>
+                <td>在庫金額</td>
+            </tr>
+            <tr>
+                <td>ーーー</td>
+                <td>ーーー</td>
+                <td>ーーー</td>
+                <td>ーーー</td>
+            </tr>
+            <tr>
+                <td>総在庫数</td>
+                <td>総在庫金額</td>
+            </tr>
+            <tr>
+                <td><span>ーーー</span>点</td>
+                <td><span>ーーー</span>円</td>
+            </tr>
+
+        </table>
+    </section>
+
+    <section>
+        <h2>入荷販売履歴画面</h2>
+        <table>
+            <tr>
+                <td>取引</td>
+                <td>ID</td>
+                <td>日付</td>
+                <td>商品名</td>
+                <td>個数</td>
+            </tr>
+            <tr>
+                <td>ーー</td>
+                <td>ーー</td>
+                <td>ーー</td>
+                <td>ーー</td>
+                <td>ーー</td>
+            </tr>
+        </table>
+    </section>
+    </div>
+        <a href="index.html">業務選択画面に戻る</a>
+
+    <script src="./data/data.js"></script>
+    <script src="./data/history_data.js"></script>
+    <script src="./js/inventory.js"></script>
+</body>
+</html>
