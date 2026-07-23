@@ -22,17 +22,25 @@ img {
     display:none;
 }
 
-.sub img{
-    height: auto;
-    width: 300px;
+dialog img,
+.content-modal img {
+    width: 200px;
+    height: 150px;
+    object-fit: contain;
+    margin: 0 auto 1rem;
+    display: block;
 }
-/* :hover .skill-content img{
-    border:1px solid black;
-} */
-dialog img{
-    width: 33%;
-    max-height: 33%;
+
+.list-content img,
+.app-container img {
+    width: 160px;
+    height: 120px;
+    object-fit: contain;
+    background-color: #f8f9fa;
+    display: block;
+    margin: 0 auto;
 }
+
 /* nav */
 .flex-row{
     display: flex;
@@ -46,6 +54,15 @@ dialog img{
 #my{
     text-align: center;
     margin-top: 8px;
+}
+
+h1 a{
+    text-decoration: none;
+    color: black;
+}
+
+#nav li a{
+    text-decoration: none;
 }
 
 .nav button{
@@ -126,8 +143,8 @@ dialog img{
 }
 .app-container {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     gap: 20px;
     padding: 20px 0;
 }
@@ -138,11 +155,12 @@ section section > div {
     gap: 20px;
     padding: 20px 0;
 }
-.sub button {
-    background: none;
-    border: none;
-    padding: 0;
-    cursor: pointer;
+#content-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0; /* この場合はmarginをリセットします */
 }
 .list-content{
     width:100%;
@@ -204,11 +222,19 @@ section section > div {
         object-fit: cover;
         object-position: center;
     }
+    .app-container {
+        display: flex;
+        flex-direction: row !important;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
     .skill-container{
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        gap:15px;
+        gap:20px;
         padding: 20px 0;;
     }
     .list-content{
@@ -218,9 +244,8 @@ section section > div {
     align-items: center;
     justify-content: center;
     }
-    .list-content img{
-        width: 100%;
-        height: auto;
-        display: block;
+    .skill-container .list-content{
+    width: calc(33.333% - 15px) !important;
+    max-width: none !important;
     }
 }
