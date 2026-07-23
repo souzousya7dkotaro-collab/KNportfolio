@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-.top,.arrive,.sell{
+#index,#top,#arrive,#sell,#inventory{
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -23,4 +23,20 @@
     gap: 8px;
 }
 
+/* sell */
 
+.select-product tr td{
+    border: solid 1px;
+}
+.calc tr td{
+    border: solid 1px;
+}
+
+/* inventory */
+.inventory-count tr td{
+    border: solid 1px;
+}
+
+.stock-sales-history tr td{
+    border: solid 1px;
+}

@@ -15,26 +15,26 @@
 
     <section>
         <h2>棚卸画面</h2>
-        <table>
+        <table class="inventory-count">
             <tr>
                 <td>商品名</td>
                 <td>価格</td>
                 <td>在庫数</td>
                 <td>在庫金額</td>
             </tr>
-            <tr>
-                <td>ーーー</td>
-                <td>ーーー</td>
-                <td>ーーー</td>
-                <td>ーーー</td>
+            <tr v-for="product in products">
+                <td>{{product.name}}</td>
+                <td>{{product.price}}</td>
+                <td>{{product.stock}}</td>
+                <td>{{product.price*product.stock}}</td>
             </tr>
             <tr>
                 <td>総在庫数</td>
                 <td>総在庫金額</td>
             </tr>
             <tr>
-                <td><span>ーーー</span>点</td>
-                <td><span>ーーー</span>円</td>
+                <td><span>{{allProductStock}}</span>点</td>
+                <td><span>{{allProductPrice}}</span>円</td>
             </tr>
 
         </table>
@@ -42,7 +42,7 @@
 
     <section>
         <h2>入荷販売履歴画面</h2>
-        <table>
+        <table class="stock-sales-history">
             <tr>
                 <td>取引</td>
                 <td>ID</td>
@@ -50,17 +50,21 @@
                 <td>商品名</td>
                 <td>個数</td>
             </tr>
-            <tr>
-                <td>ーー</td>
-                <td>ーー</td>
-                <td>ーー</td>
-                <td>ーー</td>
-                <td>ーー</td>
+            <tr v-for="his in history">
+                <td>{{his.type}}</td>
+                <td>{{his.id}}</td>
+                <td>{{his.date}}</td>
+                <td>{{his.name}}</td>
+                <td>{{his.quantity}}</td>
             </tr>
         </table>
     </section>
+        <footer>
+            <button class="btn btn-info"><a href="pos.html">業務選択画面に戻る</a></button>
+        </footer>
     </div>
-        <a href="index.html">業務選択画面に戻る</a>
+
+        
 
     <script src="./data/data.js"></script>
     <script src="./data/history_data.js"></script>

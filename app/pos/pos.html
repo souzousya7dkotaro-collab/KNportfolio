@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <div class="top">
+    <div class="top" id="index">
         <h1 class="top-title">業務選択画面</h1>
         <nav class="top-nav">
             <ul class="top-ul">
@@ -20,8 +20,12 @@
                 <li class="inventory"><a href="inventory.html">棚卸・履歴</a></li>
             </ul>
         </nav>
+        <button id="clear-local-storage"
+        @click="clearLocalStorage"
+        class="btn btn-danger w-25 mx-auto">ローカルストレージ消去</button>
     </div>
 
+<script src="./js/pos.js"></script>
 
 </body>
 </html>

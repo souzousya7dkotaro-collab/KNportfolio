@@ -13,18 +13,11 @@
 <div id="app1">
     <main>
     <h1 ><a href="index.html">KNのポートフォリオ</a></h1>
-    <nav>
-        <ul class="flex-row" id="nav">
-            <li><a href="#my">自己紹介</a></li>
 
-            <li><a href="#skill">スキル</a></li>
-            <li><a href="#dev">開発環境</a></li>
-            <li><a href="#license">所有資格</a></li>
-            <li><a href="#application">アプリケーション</a></li>
-            <li><a href="#qa">お問い合わせ</a></li>
-        </ul>
-    </nav>
-    <img src="images/SPmainvisual.jpg" alt="SP_mainvisual">
+        <site-nav :is-nav-open="isNavOpen" @toggle-nav="toggleNav"></site-nav>
+
+    <img class="sp-img" src="images/SPmainvisual.jpg" alt="SP_mainvisual">
+    <img class="pc-img" src="images/PCmainvisual.jpg" alt="PC_mainvisual">
     </main>
 
     <div class ="sub">
@@ -48,12 +41,13 @@
                 <li>スマホ教室</li>
             </ul>
             </p>
-            <p>趣味特技：占い、旅行、運動、テイスティング、家電</p>
+            <p>趣味特技：四柱推命、九星気学、旅行、運動、テイスティング、家電</p>
             </div>
         </div>
 
         <div v-for="list in skillList" :key="list.id">
         <skill-list :skill="list" :list-content="listContent"
+        :app-list="appList"
         @content-modal="openContentModal"></skill-list>
         </div>
         <content-modal ref="openContentModal"></content-modal>

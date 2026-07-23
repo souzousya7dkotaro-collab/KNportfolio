@@ -4,13 +4,15 @@ new Vue({
         isOpen:false,
         skillList:skillList,
         listContent:listContent,
+        appList:appList,
+        isNavOpen:false,
     },
     methods:{
-        toggle(){
-            this.isOpen=!this.isOpen;
-        },
         openContentModal(content){
             this.$refs.openContentModal.openContentModal(content);
+        },
+        toggleNav(){
+            this.isNavOpen = !this.isNavOpen;
         }
     }
 });

@@ -23,8 +23,12 @@ new Vue({
                 alert('商品名と価格を入力して下さい');
                 return;
         }
-        const newId = this.products.length > 0 ?
-        this.products[this.products.length -1].id +1 :1;
+        let newId;
+        if(this.products.length>0){
+            newId=this.products[this.products.length-1].id+1;
+        }else{
+            newId=1;
+        }
         //オブジェクト作成
         const newProduct ={
             id:newId,

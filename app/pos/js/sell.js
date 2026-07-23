@@ -58,13 +58,30 @@ new Vue({
                 alert("現金が足りません。");
                 return;
             }
+
+            let Error =false;
+            this.cartItems.forEach(item =>{
+                if(item.selectedProduct){
+                    const targetProduct = this.products.find(p => p.id === item.selectedProduct.id);
+                    if(targetProduct){
+                        if(item.quantity > targetProduct.stock){
+                            alert(`「${targetProduct.name}」の在庫が足りません。（現在の在庫：${targetProduct.stock}個`);
+                            Error = true;
+                        }
+                    }
+                }
+            });
+            if(Error){
+                return;
+            }
+
             this.cartItems.forEach(item=> {
                 if(item.selectedProduct){
                     const targetProduct = this.products.find(p => p.id === item.selectedProduct.id);
                     if(targetProduct){
                         targetProduct.stock -= item.quantity;
                     }
-                    addTransactionHistory('販売',item.targetProduct,item.quantity);
+                    addTransactionHistory('販売',item.selectedProduct,item.quantity);
                     }
             });
             saveProducts(this.products);

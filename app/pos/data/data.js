@@ -4,10 +4,6 @@ const INITIAL_PRODUCTS=[
     {id:3, name:"らっぱ",price:200,stock:1}
 ];
 
-//   localStorage.setItem(キー名, 保存する値)
-//   ('key',value);このセットで保存
-//   localStorage.setItem('mySimpleMemo',value);　mySimpleMemo:'太郎'で保存される
-
 const getProducts = () =>{
     const products = localStorage.getItem('products');
     if(!products){

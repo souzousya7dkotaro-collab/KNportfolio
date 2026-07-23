@@ -13,7 +13,7 @@
     <div id="sell">
     <h1>販売画面</h1>
     <form id="sell-product" @submit.prevent="checkOut">
-        <table>
+        <table class="select-product">
             <!-- 商品購入画面上部 -->
             <tr>
                 <td>商品名</td>
@@ -25,7 +25,8 @@
             <tr v-for="item in cartItems" :key="item.id">
                 <td>
                     <label>
-                    <select name="scan-product" v-model="item.selectedProduct">
+                    <select name="scan-product" v-model="item.selectedProduct"
+                    class="form-control w-75 mx-auto p-2">
                         <option :value="null">商品を選択してください</option>
                         <option v-for="product in products" :key="product.id"
                             :value="product">{{product.name}}</option>
@@ -53,7 +54,7 @@
             </tr>
         </table>
         <!-- 合計 -->
-        <section>
+        <section class="calc d-flex justify-content-end">
             <div>
                 <table>
                     <tr>
@@ -86,11 +87,15 @@
             </div>
         </section>
         <input type="text">
-        <button type="submit">清算</button>
+        <button type="submit"
+        class="btn btn-success">清算</button>
 
     </form>
+        <footer>
+            <button class="btn btn-info "><a href="pos.html">業務選択画面に戻る</a></button>
+        </footer>
     </div>
-    <a href="index.html">業務選択画面に戻る</a>
+        
 
     <script src="./data/data.js"></script>
     <script src="./data/history_data.js"></script>

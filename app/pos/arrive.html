@@ -18,7 +18,9 @@
                 <div class="selected-number">
                         <label for="selected-product">入荷商品</label>
 
-                        <select name="selected-product" id="selected-product"
+                        <select name="selected-product" 
+                        class="form-control w-25 mx-auto p-2"
+                        id="selected-product"
                         v-model="selectedProduct">
 
                             <option value="" disabled
@@ -30,33 +32,38 @@
                     </div>
                     <div class="number-product">
                         <label for="number-product">個数</label>
-                        <input type="number" id="number-product"
+                        <input class="form-control w-25 mx-auto p-2"
+                        type="number" id="number-product"
                         v-model.number="numberProduct" min="1">
                     </div>
-                    <button type="submit">個数登録</button>
+                    <button type="submit"
+                    class="btn btn-success w-25 mx-auto">個数登録</button>
             </form>
 
             <form @submit.prevent="newProduct" class="register-product">
                 <div class="new-product">
                     <label for="new-product-name">新商品</label>
                     <input type="text" id="new-product-name"
+                    class="form-control w-25 mx-auto p-2"
                     v-model="newProductName" placeholder="未登録の商品名を入力">
                 </div>
                 <div class="price-product">
                     <label for="new-product-price">価格</label>
                     <input type="number" id="new-product-price"
+                    class="form-control w-25 mx-auto p-2"
                     v-model.number="newProductPrice" min="0"
                     placeholder="価格を入力">
                 </div>
-                <button type="submit">商品登録</button>
+                <button type="submit"
+                class="btn btn-warning">商品登録</button>
             </form>
 
         </fieldset>
    
 
-        <div>
-            <a href="index.html">業務選択画面に戻る</a>
-        </div>
+        <footer>
+            <button class="btn btn-info"><a href="pos.html">業務選択画面に戻る</a></button>
+        </footer>
      </div>
 
     <script src="./data/data.js"></script>

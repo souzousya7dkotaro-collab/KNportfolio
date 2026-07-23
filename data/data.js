@@ -1,8 +1,13 @@
+appList=[
+    {id:1,name:'黄金比',image:'app01.png',folder:'golden-ratio',file:'golden-ratio.html'},
+    {id:2,name:'簡易POSシステム',image:'app02.png',folder:'pos',file:'pos.html'}
+];
+
 skillList=[
-    {id:1,title:'スキル',category:'skill'},
-    {id:2,title:'開発環境',category:'dev'},
-    {id:3,title:'所有資格',category:'license'},
-    {id:4,title:'アプリケーション',category:'application'},
+    {id:1,title:'アプリケーション',category:'application'},
+    {id:2,title:'スキル',category:'skill'},
+    {id:3,title:'開発環境',category:'dev'},
+    {id:4,title:'所有資格',category:'license'},
     {id:5,title:'お問い合わせ',category:'qa'},
 ];
 
